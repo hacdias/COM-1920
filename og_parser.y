@@ -22,9 +22,8 @@
 
 %token <i> tINT
 %token <s> tIDENTIFIER tSTRING
-%token <a> tAUTO
 %token <r> tREAL
-%token tPTR
+%token tTPTR tTINT tTSTRING tTREAL tTAUTO
 %token tPUBLIC tREQUIRE
 %token tSIZEOF tNULLPTR tPROCEDURE
 %token tBREAK tCONTINUE tRETURN tINPUT
@@ -114,7 +113,7 @@ proc : tPROCEDURE lval
 type : tINT
      | tREAL
      | tSTRING
-     | tPTR "<" typeauto ">"
+     | tTPTR "<" typeauto ">"
 
 block : "{" "}"
       | "{" decls"}"
